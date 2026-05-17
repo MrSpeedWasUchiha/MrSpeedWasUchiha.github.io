@@ -23,62 +23,6 @@ export interface Fixer {
 
 export const FIXER_REGISTRY: Fixer[] = [
   { 
-    id: 'F-001', 
-    name: 'Siegfried', 
-    rank: 'GRADE 1', 
-    association: 'Zwei Association', 
-    office: 'Southern Branch',
-    status: 'ACTIVE',
-    threat_level: 'STAR_OF_THE_CITY',
-    description: "Personnel recognized for contributions in Anti-Gank Association.",
-    logs: [
-        {
-        designation: "ADDENDUM-1",
-        timestamp: "2025.12",
-        content: "Initial recruitment successful. Shows high aptitude for backend systems."
-        },
-        {
-        designation: "ADDENDUM-2",
-        timestamp: "2026.05",
-        content: "El sujeto ha mostrado una resiliencia inusual ante fenómenos de 'Distorsión'."
-        },
-        {
-        designation: "LOG_END",
-        timestamp: "SYSTEM_FINAL",
-        content: "Registro verificado por el Administrador 'The Public Relations Guy'."
-        }
-    ],
-    equipment: ["Standard Grade Weaponry", "Hana-Spec Armor"]
-  },
-  { 
-    id: 'F-002', 
-    name: 'Xiao', 
-    rank: 'GRADE 1', 
-    association: 'Liu Association', 
-    office: 'Section 1',
-    status: 'MIA', 
-    threat_level: 'STAR_OF_THE_CITY',
-    description: "Personnel recognized for contributions in Anti-Gank Association.",
-    logs: [
-        {
-        designation: "ADDENDUM-1",
-        timestamp: "2025.12",
-        content: "Initial recruitment successful. Shows high aptitude for backend systems."
-        },
-        {
-        designation: "ADDENDUM-2",
-        timestamp: "2026.05",
-        content: "El sujeto ha mostrado una resiliencia inusual ante fenómenos de 'Distorsión'."
-        },
-        {
-        designation: "LOG_END",
-        timestamp: "SYSTEM_FINAL",
-        content: "Registro verificado por el Administrador 'The Public Relations Guy'."
-        }
-    ],
-    equipment: ["Standard Grade Weaponry", "Hana-Spec Armor"]
-  },
-  { 
     id: 'F-003', 
     name: 'Min Lilowth, The Pink Guardian', 
     rank: 'COLOR GRADE', 
@@ -106,33 +50,5 @@ export const FIXER_REGISTRY: Fixer[] = [
     ],
     equipment: ["Unknown Weapon", "AGA Section 1 Director Uniform"]
   },
-  { 
-    id: 'F-004', 
-    name: 'Yujin', 
-    rank: 'GRADE 1', 
-    association: 'Shi Association', 
-    office: 'Section 1',
-    status: 'MIA', 
-    threat_level: 'STAR_OF_THE_CITY',
-    description: "Personnel recognized for contributions in Anti-Gank Association.",
-    logs: [
-        {
-        designation: "ADDENDUM-1",
-        timestamp: "2025.12",
-        content: "Initial recruitment successful. Shows high aptitude for backend systems."
-        },
-        {
-        designation: "ADDENDUM-2",
-        timestamp: "2026.05",
-        content: "El sujeto ha mostrado una resiliencia inusual ante fenómenos de 'Distorsión'."
-        },
-        {
-        designation: "LOG_END",
-        timestamp: "SYSTEM_FINAL",
-        content: "Registro verificado por el Administrador 'The Public Relations Guy'."
-        }
-    ],
-    equipment: ["Standard Grade Weaponry", "Hana-Spec Armor"]
-  },
-  // Puedes seguir agregando fixers aquí fácilmente
+  // Puedo agregar mas Fixers
 ];
