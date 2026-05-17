@@ -23,7 +23,7 @@ export interface Fixer {
 
 export const FIXER_REGISTRY: Fixer[] = [
   { 
-    id: 'F-003', 
+    id: 'F-001', 
     name: 'Min Lilowth, The Pink Guardian', 
     rank: 'COLOR GRADE', 
     association: 'Anti-Gank Association',
