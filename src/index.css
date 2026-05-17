@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hana-gold: #d4af37;
+  --color-hana-dark: #000000;
+
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100vh);
+    }
+
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+
+  @keyframes expand-terminal {
+    0% {
+      transform: scaleX(0) scaleY(0.01);
+      opacity: 0;
+    }
+
+    40% {
+      transform: scaleX(1) scaleY(0.01);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scaleX(1) scaleY(1);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(500%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s ease-out forwards;
+}
+
+.animate-expand {
+  /* Aplicamos la animación: dura 0.6s con una curva suave */
+  animation: expand-terminal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: center;
+  /* Se expande desde el centro */
+}
+
+/* Capa base del filtro */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100;
+  /* Asegura que esté por encima de TODO */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.15) 50%);
+  background-size: 100% 4px;
+}
+
+/* La barra de escaneo móvil */
+.crt-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  /* Grosor del haz de luz */
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(212, 175, 55, 0.05) 50%,
+      transparent 100%);
+  /* Animación que recorre todo el alto del visor */
+  animation: scanline 6s linear infinite;
+}
+
+/* Estilo para la barra de desplazamiento custom */
+.custom-scrollbar {
+    scrollbar-width: thin;          /* Para Firefox */
+    scrollbar-color: #4a4a4a transparent; /* Para Firefox: (Color barra) (Color fondo) */
+}
+
+/* Para Chrome, Edge y Safari */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px !important;
+    display: block !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a !important; /* El gris de la image_56f426.png */
+    border-radius: 20px !important;
+    border: 1px solid transparent !important; /* Pequeño margen */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #d4af37 !important; /* Oro Hana al pasar el mouse */
+}
