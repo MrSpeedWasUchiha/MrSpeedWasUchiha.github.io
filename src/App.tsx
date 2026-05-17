@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// Importamos los datos iniciales de tu archivo externo
 import { ASSOCIATION_CONFIG, type AssocID } from './data/associations';
 import { SYNDICATE_CONFIG, type SyndicateID } from './data/syndicates';
 import { FIXER_REGISTRY, type Fixer } from './data/fixers';
@@ -10,10 +9,10 @@ const AssociationDetail = ({
   assoc, 
   onClose 
 }: { 
-  assoc: any, // Cambiado de 'assoc' a 'id' para mayor consistencia
+  assoc: any, 
   onClose: () => void
 }) => {
-  // Extraemos la data directamente de tu configuración global usando el ID
+  // Extraer la data directamente de la configuración global usando el ID
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-500">
@@ -127,10 +126,10 @@ const SyndicateDetail = ({
   syndicate, 
   onClose 
 }: { 
-  syndicate: any, // Cambiado de 'assoc' a 'id' para mayor consistencia
+  syndicate: any, 
   onClose: () => void
 }) => {
-  // Extraemos la data directamente de tu configuración global usando el ID
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-500">
@@ -246,7 +245,7 @@ const FixerDetail = ({
   fixer, 
   onClose 
 }: { 
-  fixer: Fixer, // Asegúrate de que tu interfaz Fixer incluya 'logs' y 'equipment'
+  fixer: Fixer,
   onClose: () => void 
 }) => {
   return (
@@ -653,7 +652,7 @@ const App = () => {
                             <div className="absolute right-3 top-1/2 -translate-y-1/2 w-1.5 h-4 bg-hana-gold/20 animate-pulse"></div>
                           </div>
 
-                          {/* LISTA SCROLLEABLE (Referencia: image_57ca17.png) */}
+                          {/* LISTA SCROLLEABLE */}
                           <div className="flex-grow overflow-y-auto custom-scrollbar pr-2 space-y-2">
                             {FIXER_REGISTRY
                               .filter(fixer => fixer.name.toLowerCase().includes(searchTerm.toLowerCase()))
